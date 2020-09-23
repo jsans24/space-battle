@@ -60,7 +60,7 @@ const battle = {
             ask()
             for (k = 0; k < 10000; k ++) {
                 console.log(answer);
-                if (answer.isNaN || (answer < 1 || answer > attackingAliens.length)) {
+                if (isNaN(answer) || (answer < 1 || answer > attackingAliens.length)) {
                     ask();
                 } else {
                     yourShip.attack(attackingAliens[answer - 1]);
